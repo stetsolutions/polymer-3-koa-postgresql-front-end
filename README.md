@@ -16,4 +16,4 @@ Open terminal at project root and execute
 
 ## Test
 
-Please refer to [wiki](https://github.com/StetSolutions/ss-simple-front-end/wiki/Testing)
+Please refer to [wiki](https://github.com/StetSolutions/polymer-3-koa-postgresql-front-end/wiki/Testing)
