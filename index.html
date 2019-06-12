@@ -1,0 +1,169 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="Polymer Starter Kit" name="generator" />
+    <meta
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+      name="viewport"
+    />
+
+    <title>Stet Solutions :: Simple Front-end 1.0.0</title>
+    <meta
+      content="Stet Solutions :: Simple Front-end 1.0.0"
+      name="Simple Front-end"
+    />
+
+    <base href="/" />
+
+    <link href="images/favicon/favicon.ico" rel="icon" />
+    <link
+      href="images/favicon/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="images/favicon/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+
+    <link href="manifest.json" rel="manifest" />
+
+    <meta content="#2d68c4" name="theme-color" />
+
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="Simple" name="application-name" />
+
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta
+      content="black-translucent"
+      name="apple-mobile-web-app-status-bar-style"
+    />
+    <meta content="Simple" name="apple-mobile-web-app-title" />
+
+    <link href="images/manifest/icon-48x48.png" rel="apple-touch-icon" />
+    <link
+      href="images/manifest/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="images/manifest/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="images/manifest/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="images/manifest/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+
+    <meta
+      content="images/manifest/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta content="#2d68c4" name="msapplication-TileColor" />
+    <meta content="no" name="msapplication-tap-highlight" />
+
+    <script>
+      window.MyAppGlobals = {
+        config: {
+          api: {
+            origin: 'http://127.0.0.1:3000',
+            path: 'api/v1',
+          },
+        },
+        rootPath: '/',
+      };
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js', {
+            scope: MyAppGlobals.rootPath,
+          });
+        });
+      }
+    </script>
+
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="node_modules/web-animations-js/web-animations-next-lite.min.js"></script>
+
+    <script type="module" src="./src/my-app.js"></script>
+
+    <style>
+      body {
+        background-color: #eeeeee;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      .dialog {
+        border-radius: 2px;
+        margin: 16px 32px;
+        overflow: auto;
+      }
+
+      .dialog__dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+      }
+
+      .dialog__heading {
+        padding-top: 20px;
+      }
+
+      .dialog__checkbox {
+        margin: 10px 0;
+      }
+
+      .dialog__icon {
+        padding-bottom: 3px;
+      }
+
+      .dialog__footer {
+        text-align: right;
+      }
+
+      .dialog__button {
+        height: 36px;
+        padding: 0 16px;
+      }
+
+      .dialog__span {
+        padding-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <my-app></my-app>
+
+    <paper-toast></paper-toast>
+
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+  </body>
+</html>

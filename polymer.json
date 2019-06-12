@@ -1,0 +1,80 @@
+{
+  "builds": [
+    {
+      "addServiceWorker": true,
+      "basePath": true,
+      "browserCapabilities": ["es2015", "modules"],
+      "bundle": true,
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "js": {
+        "minify": true
+      },
+      "name": "esm-bundled"
+    },
+    {
+      "addServiceWorker": true,
+      "basePath": true,
+      "browserCapabilities": ["es2015"],
+      "bundle": true,
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "js": {
+        "minify": true,
+        "transformModulesToAmd": true
+      },
+      "name": "es6-bundled"
+    },
+    {
+      "addServiceWorker": true,
+      "basePath": true,
+      "bundle": true,
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "js": {
+        "compile": true,
+        "minify": true,
+        "transformModulesToAmd": true
+      },
+      "name": "es5-bundled"
+    }
+  ],
+  "entrypoint": "index.html",
+  "extraDependencies": [
+    "manifest.json",
+    "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
+    "node_modules/@webcomponents/webcomponentsjs/*.js",
+    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js",
+    "node_modules/web-animations-js/*.js"
+  ],
+  "fragments": [
+    "src/my-change-password.js",
+    "src/my-dashboard.js",
+    "src/my-edit-profile.js",
+    "src/my-error.js",
+    "src/my-example.js",
+    "src/my-login.js",
+    "src/my-pagination.js",
+    "src/my-password-validator.js",
+    "src/my-user.js"
+  ],
+  "lint": {
+    "rules": ["polymer-3"]
+  },
+  "moduleResolution": "node",
+  "npm": true,
+  "shell": "src/my-app.js",
+  "sources": ["images/**/*", "package.json", "src/**/*"]
+}
